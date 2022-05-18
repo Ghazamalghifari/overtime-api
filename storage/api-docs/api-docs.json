@@ -61,6 +61,63 @@
                 }
             }
         },
+        "/overtimes": {
+            "post": {
+                "tags": [
+                    "Overtimes"
+                ],
+                "summary": "Create Overtime",
+                "description": "Create the specified overtime in storage",
+                "operationId": "createOvertime",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "employee_id": {
+                                        "type": "integer",
+                                        "example": "1"
+                                    },
+                                    "date": {
+                                        "type": "string",
+                                        "example": "2022-05-05"
+                                    },
+                                    "time_started": {
+                                        "type": "string",
+                                        "example": "15:00"
+                                    },
+                                    "time_ended": {
+                                        "type": "string",
+                                        "example": "17:00"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "meta": {
+                                            "type": "object"
+                                        },
+                                        "data": {
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
         "/references": {
             "get": {
                 "tags": [
