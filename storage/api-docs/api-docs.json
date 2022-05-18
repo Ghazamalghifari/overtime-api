@@ -71,11 +71,5 @@
                 }
             }
         }
-    },
-    "tags": [
-        {
-            "name": "Projects",
-            "description": "API Endpoints of Projects"
-        }
-    ]
+    }
 }
