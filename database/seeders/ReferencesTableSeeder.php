@@ -16,13 +16,13 @@ class ReferencesTableSeeder extends Seeder
     public function run()
     {
         Reference::create([
-        	'code' => 'dynamic_overtime',  
+        	'code' => 'overtime_method',  
         	'name' => 'Salary / 173', 
         	'expression' => '(Salary / 173) * overtime_duration_total',  
         ]);
 
         Reference::create([
-        	'code' => 'static_overtime',  
+        	'code' => 'overtime_method',  
         	'name' => 'Fixed', 
         	'expression' => '10000 * overtime_duration_total',  
         ]);
