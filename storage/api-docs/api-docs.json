@@ -70,6 +70,56 @@
                     }
                 }
             }
+        },
+        "/settings": {
+            "patch": {
+                "tags": [
+                    "Settings"
+                ],
+                "summary": "Update Setting",
+                "description": "Update the specified setting in storage",
+                "operationId": "updateSetting",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "key": {
+                                        "type": "string",
+                                        "example": "overtime_method"
+                                    },
+                                    "value": {
+                                        "type": "integer",
+                                        "example": "1"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "meta": {
+                                            "type": "object"
+                                        },
+                                        "data": {
+                                            "type": "object",
+                                            "example": null
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
