@@ -12,6 +12,55 @@
         }
     ],
     "paths": {
+        "/employees": {
+            "post": {
+                "tags": [
+                    "Employees"
+                ],
+                "summary": "Create Employee",
+                "description": "Create the specified employee in storage",
+                "operationId": "createEmployee",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "example": "ghazamalghifari"
+                                    },
+                                    "salary": {
+                                        "type": "integer",
+                                        "example": "2000000"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "meta": {
+                                            "type": "object"
+                                        },
+                                        "data": {
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
         "/references": {
             "get": {
                 "tags": [
