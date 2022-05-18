@@ -39,6 +39,14 @@ Running On :
 http://127.0.0.1:8000
 
 
+
+
+Unit Testing
+
+```bash 
+php artisan test --parallel
+```
+
 ## Documentation
 [Swagger](http://127.0.0.1:8000/api/documentation)
 
