@@ -118,6 +118,44 @@
                 }
             }
         },
+        "/overtime-pays/calculate": {
+            "get": {
+                "tags": [
+                    "Overtime Pays"
+                ],
+                "summary": "Get calculate of overtime pays",
+                "description": "Returns list of overtime pays calculate",
+                "operationId": "getOvertimePaysCalculate",
+                "parameters": [
+                    {
+                        "name": "month",
+                        "in": "query",
+                        "required": true,
+                        "example": "2022-05"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "meta": {
+                                            "type": "object"
+                                        },
+                                        "data": {
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
         "/references": {
             "get": {
                 "tags": [

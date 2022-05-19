@@ -13,4 +13,9 @@ class Employee extends Model
         'name',
         'salary',
     ];
+
+    public function Overtimes()
+    {
+        return $this->hasMany('App\Models\Overtime', 'employee_id', 'id');
+    }
 }

@@ -18,4 +18,9 @@ class Setting extends Model
         'key',
         'value',
     ];
+
+    public function Reference()
+    {
+        return $this->hasOne('App\Models\Reference', 'id', 'value');
+    }
 }

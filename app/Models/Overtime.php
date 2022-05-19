@@ -15,4 +15,10 @@ class Overtime extends Model
         'time_started',
         'time_ended' 
     ];
+
+    protected $hidden = [
+        'employee_id',
+        'created_at',
+        'updated_at',
+    ];
 }
